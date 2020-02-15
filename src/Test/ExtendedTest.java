@@ -34,7 +34,10 @@ public class ExtendedTest extends Test {
 
         System.out.println("list: " + list.toString());
 
+        //All numbers within a specified range (3 and 8, in this case)
         List<Integer> range = (test(arg -> arg >= LOWER_BOUND && arg < UPPER_BOUND));
+
+        //All numbers which are prime according to the following naive solution
         List<Integer> primes = (test(arg -> {
             if(arg > 0 && arg <= 3){
                 return true;

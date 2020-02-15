@@ -38,9 +38,14 @@ public class BasicTest extends Test{
 
         System.out.println("list: " + list.toString());
 
+        //Basic form. The result after the "->" is returned by default.
         List<Integer> greater = test(arg -> arg > 5);
-        List<Integer> lesser = test(arg -> arg < 5);
-        List<Integer> equal = test(arg -> arg == 5);
+        //If there were no parameters, use "() -> {code}", replacing "arg" with "()".
+        List<Integer> lesser = test((arg) -> arg < 5);
+        //A more explicit function notation for more complex lambda functions.
+        List<Integer> equal = test(arg -> {
+            return arg == 5;
+        });
 
         System.out.println("greater: " + greater.toString());
         System.out.println("lesser: " + lesser.toString());
